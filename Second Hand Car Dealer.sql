@@ -30,3 +30,28 @@ select count(*) from car_dekho where fuel ="cng" and year = 2015; #2
 select year , count(*) from car_dekho where fuel = "petrol" group by year;
 select year , count(*) from car_dekho where fuel = "Deisel" group by year;
 select year , count(*) from car_dekho where fuel = "CNG" group by year;
+
+-- Manager said there were more than 100 cars ina given year, which year had more than  100 cars --
+select year, count(*) from car_dekho group by year having count(*)>100;
+select year, count(*) from car_dekho group by year having count(*)<50;
+
+--  the manager said to employee all cars count details between 2015 and 2023 ; we need a complete list --
+select count(*) from car_dekho where year  between 2015 and 2023;
+
+-- the manager said to the employee all cars details between 2015 to 2020 we need complete list--
+select * from car_dekho where year between 2015 and 2020;
+
+-- if client asked to the dealer show me car above  selling price  5000000  --
+select * from car_dekho where selling_price >=5000000;
+select * from car_dekho where selling_price <=500000;
+
+-- if we count the car of above 6000000 selling_price --
+select count(*) from car_dekho where selling_price >= 6000000; 
+select count(*) from car_dekho where selling_price <= 700000; 
+
+-- Top 5  most  eExpensive car 
+select Name, Selling_price
+from car_dekho
+order by Selling_price desc
+limit 5;
+

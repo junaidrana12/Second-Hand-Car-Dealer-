@@ -1,6 +1,4 @@
 # Second-Hand-Car-Dealer-
-
-# 🚗 Second Hand Car Dealer
 The Second Hand Car Dealer project is a real-world data analysis project built using MySQL and a CSV dataset (Car dekho.csv). The goal of the project is to simulate a used car dealership platform from a data perspective, performing deep insights through SQL queries.
 
 
